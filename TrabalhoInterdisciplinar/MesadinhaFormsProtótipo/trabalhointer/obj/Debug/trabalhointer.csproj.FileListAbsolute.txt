@@ -1,0 +1,40 @@
+C:\Users\joaoz\source\repos\trabalhointer\trabalhointer\obj\Debug\trabalhointer.csprojAssemblyReference.cache
+C:\Users\joaoz\source\repos\trabalhointer\trabalhointer\obj\Debug\trabalhointer.Login.resources
+C:\Users\joaoz\source\repos\trabalhointer\trabalhointer\obj\Debug\trabalhointer.Properties.Resources.resources
+C:\Users\joaoz\source\repos\trabalhointer\trabalhointer\obj\Debug\trabalhointer.csproj.GenerateResource.cache
+C:\Users\joaoz\source\repos\trabalhointer\trabalhointer\obj\Debug\trabalhointer.csproj.CoreCompileInputs.cache
+C:\Users\joaoz\source\repos\trabalhointer\trabalhointer\obj\Debug\trabalhointer.cadastro.resources
+C:\Users\joaoz\source\repos\trabalhointer\trabalhointer\bin\Debug\trabalhointer.exe.config
+C:\Users\joaoz\source\repos\trabalhointer\trabalhointer\bin\Debug\trabalhointer.exe
+C:\Users\joaoz\source\repos\trabalhointer\trabalhointer\bin\Debug\trabalhointer.pdb
+C:\Users\joaoz\source\repos\trabalhointer\trabalhointer\bin\Debug\MySql.Data.dll
+C:\Users\joaoz\source\repos\trabalhointer\trabalhointer\bin\Debug\MySql.Data.xml
+C:\Users\joaoz\source\repos\trabalhointer\trabalhointer\obj\Debug\trabalhointer.csproj.CopyComplete
+C:\Users\joaoz\source\repos\trabalhointer\trabalhointer\obj\Debug\trabalhointer.exe
+C:\Users\joaoz\source\repos\trabalhointer\trabalhointer\obj\Debug\trabalhointer.pdb
+C:\Users\joaoz\source\repos\trabalhointer\trabalhointer\obj\Debug\trabalhointer.dados.resources
+C:\Users\joaoz\source\repos\trabalhointer\trabalhointer\obj\Debug\trabalhointer.usuario.resources
+C:\Users\joaoz\source\repos\trabalhointer\trabalhointer\obj\Debug\trabalhointer.senha.resources
+C:\Users\joaoz\source\repos\trabalhointer\trabalhointer\obj\Debug\trabalhointer.categoria.resources
+C:\Users\joaoz\source\repos\trabalhointer\trabalhointer\obj\Debug\trabalhointer.conta.resources
+C:\Users\joaoz\source\repos\trabalhointer\trabalhointer\obj\Debug\trabalhointer.lancamento.resources
+C:\Users\joaoz\source\repos\trabalhointer - Copia\trabalhointer\bin\Debug\trabalhointer.exe.config
+C:\Users\joaoz\source\repos\trabalhointer - Copia\trabalhointer\bin\Debug\trabalhointer.exe
+C:\Users\joaoz\source\repos\trabalhointer - Copia\trabalhointer\bin\Debug\trabalhointer.pdb
+C:\Users\joaoz\source\repos\trabalhointer - Copia\trabalhointer\bin\Debug\MySql.Data.dll
+C:\Users\joaoz\source\repos\trabalhointer - Copia\trabalhointer\bin\Debug\MySql.Data.xml
+C:\Users\joaoz\source\repos\trabalhointer - Copia\trabalhointer\obj\Debug\trabalhointer.csprojAssemblyReference.cache
+C:\Users\joaoz\source\repos\trabalhointer - Copia\trabalhointer\obj\Debug\trabalhointer.cadastro.resources
+C:\Users\joaoz\source\repos\trabalhointer - Copia\trabalhointer\obj\Debug\trabalhointer.Login.resources
+C:\Users\joaoz\source\repos\trabalhointer - Copia\trabalhointer\obj\Debug\trabalhointer.categoria.resources
+C:\Users\joaoz\source\repos\trabalhointer - Copia\trabalhointer\obj\Debug\trabalhointer.conta.resources
+C:\Users\joaoz\source\repos\trabalhointer - Copia\trabalhointer\obj\Debug\trabalhointer.dados.resources
+C:\Users\joaoz\source\repos\trabalhointer - Copia\trabalhointer\obj\Debug\trabalhointer.lancamento.resources
+C:\Users\joaoz\source\repos\trabalhointer - Copia\trabalhointer\obj\Debug\trabalhointer.Properties.Resources.resources
+C:\Users\joaoz\source\repos\trabalhointer - Copia\trabalhointer\obj\Debug\trabalhointer.senha.resources
+C:\Users\joaoz\source\repos\trabalhointer - Copia\trabalhointer\obj\Debug\trabalhointer.usuario.resources
+C:\Users\joaoz\source\repos\trabalhointer - Copia\trabalhointer\obj\Debug\trabalhointer.csproj.GenerateResource.cache
+C:\Users\joaoz\source\repos\trabalhointer - Copia\trabalhointer\obj\Debug\trabalhointer.csproj.CoreCompileInputs.cache
+C:\Users\joaoz\source\repos\trabalhointer - Copia\trabalhointer\obj\Debug\trabalhointer.csproj.CopyComplete
+C:\Users\joaoz\source\repos\trabalhointer - Copia\trabalhointer\obj\Debug\trabalhointer.exe
+C:\Users\joaoz\source\repos\trabalhointer - Copia\trabalhointer\obj\Debug\trabalhointer.pdb

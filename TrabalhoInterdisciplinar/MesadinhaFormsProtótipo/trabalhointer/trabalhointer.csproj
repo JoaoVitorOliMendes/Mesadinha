@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D551A053-E9E9-433E-A58C-BA07CFDB7C4D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>trabalhointer</RootNamespace>
+    <AssemblyName>trabalhointer</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.10.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\..\Documents\Cotemig\TEP\trabinter\cadastro.cs">
+      <SubType>Form</SubType>
+      <Link>cadastro.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\Documents\Cotemig\TEP\trabinter\cadastro.Designer.cs">
+      <DependentUpon>cadastro.cs</DependentUpon>
+      <Link>cadastro.Designer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\Documents\Cotemig\TEP\trabinter\Conexaobd.cs">
+      <Link>Conexaobd.cs</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\Documents\Cotemig\TEP\trabinter\Form1design.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="..\..\..\..\Documents\Cotemig\TEP\trabinter\Form1design.Designer.cs">
+      <DependentUpon>Form1design.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\..\..\Documents\Cotemig\TEP\trabinter\login.cs">
+      <Link>login.cs</Link>
+    </Compile>
+    <Compile Include="categoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="categoria.Designer.cs">
+      <DependentUpon>categoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="conta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="conta.Designer.cs">
+      <DependentUpon>conta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dados.Designer.cs">
+      <DependentUpon>dados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="lancamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="lancamento.Designer.cs">
+      <DependentUpon>lancamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="senha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="senha.Designer.cs">
+      <DependentUpon>senha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="usuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="usuario.Designer.cs">
+      <DependentUpon>usuario.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="..\..\..\..\Documents\Cotemig\TEP\trabinter\cadastro.resx">
+      <DependentUpon>cadastro.cs</DependentUpon>
+      <Link>cadastro.resx</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\..\..\..\Documents\Cotemig\TEP\trabinter\Form1design.resx">
+      <DependentUpon>Form1design.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="categoria.resx">
+      <DependentUpon>categoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="conta.resx">
+      <DependentUpon>conta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dados.resx">
+      <DependentUpon>dados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lancamento.resx">
+      <DependentUpon>lancamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="senha.resx">
+      <DependentUpon>senha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usuario.resx">
+      <DependentUpon>usuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bd1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
