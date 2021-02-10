@@ -2,31 +2,54 @@
 require_once "classes/metodo.php";
 $metodo = new metodo();
 
+$cod = $metodo->cod();
+
 if(isset($_POST["salvar"]))
 {
-	$metodo->inserir();
+	$metodo->alterard();
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-	<link rel="stylesheet" type="text/CSS"
+
+<link rel="stylesheet" type="text/CSS"
 href="css/bootstrap.min.css">
 <link rel="stylesheet" type="text/CSS"
 href="css/estilo.css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
 integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 <link rel="shortcut icon" href="css/img/logo.png" type="image/x-icon">
-    <title>Cadastrar</title>
+
 </head>
 <body>
+<div class="nav">
+<ul>
+<img src="css/img/logo.png" class="img">
+<li><a href="usuario.php?codigo=<?php if ($cod): foreach($cod as $codigo): echo $codigo->codigo;endforeach;endif; ?>">Home</a></li>
+<li class="active" onmouseover=dropdown() onmouseout=away() ><a href="">Usuário</a></li>
+	<div class="sub" id="sub">
+	<ul onmouseover=dropdown() onmouseout=away()>
+		<li><a href="altsenha.php?codigo=<?php if ($cod): foreach($cod as $codigo): echo $codigo->codigo;endforeach;endif; ?>">Senha</a></li>
+		<li class="active"><a href="">Dados</a></li>
+		<li><a href="login.php">Sair</a></li>
+	</ul>
+	</div>
+<li onmouseover=dropdown2() onmouseout=away2() ><a href="">Conta</a></li>
+	<div class="sub2" id="sub2">
+	<ul onmouseover=dropdown2() onmouseout=away2()>
+		<li><a href="categoria.php?codigo=<?php if ($cod): foreach($cod as $codigo): echo $codigo->codigo;endforeach;endif; ?>">Categorias</a></li>
+		<li><a href="conta.php?codigo=<?php if ($cod): foreach($cod as $codigo): echo $codigo->codigo;endforeach;endif; ?>">Conta</a></li>
+	</ul>
+	</div>
+<li><a href="lancamento.php?codigo=<?php if ($cod): foreach($cod as $codigo): echo $codigo->codigo;endforeach;endif; ?>">Lancamento</a></li>
+</ul>
+</div>
 <div class="container center">
 <div class="row cener bot">
-<form action="cadastro.php" method="post">
+<form action="altdados.php?codigo=<?php if ($cod): foreach($cod as $codigo): echo $codigo->codigo;endforeach;endif; ?>" method="post">
 <div class="col-12 top">
-<h2>Cadastro de Usuário</h2></div>
+<h2>Alterar Dados</h2></div>
 <div class="col-4 label">
     <label for="nome">Nome </label>
 	<input type="text" name="nome" id="nome" class="top" required>
@@ -43,19 +66,30 @@ integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zF
     <label for="email">E-mail </label>
 	<input type="email" name="email" id="email" class="top" required>
 </div>
-<div class="col-4 label">   
-    <label for="senha">Senha </label>
-	<input type="password" name="senha" id="senha" class="top"  required>
-</div>
 <br>
 <button type="submit" name="salvar" value="salvar" class="form-group col-5 btn btn-success">Salvar &nbsp&nbsp<i class="fas fa-user-plus"></i></button>
-<button onclick="window.location.href='login.php'" class="form-group col-5 btn btn-primary">Voltar &nbsp&nbsp<i class="fas fa-long-arrow-alt-left"></i></button>
 </div>
 </form>
 </div>
-	<script>
-	
-	function mascara()
+</div>
+<script>
+ function dropdown()
+ {
+	document.getElementById("sub").style.display = "block"; 
+ }
+ function dropdown2()
+ {
+	document.getElementById("sub2").style.display = "block"; 
+ }
+ function away()
+ {
+	document.getElementById("sub").style.display = "none";  
+ }
+  function away2()
+ {
+	document.getElementById("sub2").style.display = "none";  
+ }
+ function mascara()
 	{
 		var tel_f = document.getElementById("t").value;
 	
@@ -84,6 +118,6 @@ integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zF
 		}
 	}
 	
-	</script>
+</script>
 </body>
 </html>

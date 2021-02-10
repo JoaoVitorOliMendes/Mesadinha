@@ -4,19 +4,20 @@ $metodo = new metodo();
 
 
 $cod = $metodo->cod();
-$selectcat = $metodo->selectcat();
+$selectlanc = $metodo->selectlanc();
+$selectcot = $metodo->selectcot();
 
-if(isset($_GET["categoria"]))
+if(isset($_GET["codigolanc"]))
 {
 	if ($cod): foreach($cod as $codigo): $codig = $codigo->codigo;endforeach;endif;
-	$metodo->delcat();
-	header("location:categoria.php?codigo=".$codig );
+	$metodo->dellanc($_GET["codigolanc"]);
+	header("location:lancamento.php?codigo=".$codig );
 }
 if(isset($_POST["salvar"]))
 {
 	if ($cod): foreach($cod as $codigo): $codig = $codigo->codigo;endforeach;endif;
-	$metodo->adicionarcat();
-	header("location:categoria.php?codigo=".$codig );
+	$metodo->adicionarlanc();
+	header("location:lancamento.php?codigo=".$codig );
 }
 ?>
 <!DOCTYPE html>
@@ -45,45 +46,67 @@ integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zF
 		<li><a href="login.php">Sair</a></li>
 	</ul>
 	</div>
-<li onmouseover=dropdown2() onmouseout=away2()  class="active"><a href="">Conta</a></li>
+<li onmouseover=dropdown2() onmouseout=away2() ><a href="">Conta</a></li>
 	<div class="sub2" id="sub2">
 	<ul onmouseover=dropdown2() onmouseout=away2()>
-		<li class="active"><a href="">Categorias</a></li>
+		<li><a href="categoria.php?codigo=<?php if ($cod): foreach($cod as $codigo): echo $codigo->codigo;endforeach;endif; ?>">Categorias</a></li>
 		<li><a href="conta.php?codigo=<?php if ($cod): foreach($cod as $codigo): echo $codigo->codigo;endforeach;endif; ?>">Conta</a></li>
 	</ul>
 	</div>
-<li><a href="lancamento.php?codigo=<?php if ($cod): foreach($cod as $codigo): echo $codigo->codigo;endforeach;endif; ?>">Lancamento</a></li>
+<li class="active"><a href="">Lancamento</a></li>
 </ul>
 </div>
 <div class="container left">
 <div class="row cener2 bot">
-<form action="categoria.php?codigo=<?php if ($cod): foreach($cod as $codigo): echo $codigo->codigo;endforeach;endif; ?>" method="post">
+<form action="lancamento.php?codigo=<?php if ($cod): foreach($cod as $codigo): echo $codigo->codigo;endforeach;endif; ?>" method="post">
 <div class="col-12 top form-group bot">
-<h2 id="h">Cadastrar Categoria</h2></div>
-<div class="form-group">
-    <label for="nomecat" class="col-8">Categoria</label>
-    <input class="form-control col-12" type="text" name="nomecat" id="nomecat" placeholder="Ex. Alimentação" required></div>
-    <button type="submit" name="salvar" value="salvar" class="btn btn-success col-6 top" required>Salvar</button>
-</form>
+<h2 id="h">Cadastrar Lançamento</h2></div>
+	<div class="form-group"> 
+	<label for="nomecot col-12">Conta</label>
+    <select name="nomecot" id="nomecot" required>
+	<?php
+		if ($selectcot):
+		foreach ($selectcot as $select) : ?>
+		<option value="<?php echo $select->nome;?>">
+			<?php echo $select->nome; ?>
+		</option>
+<?php endforeach;?>
+<?php else :?>
+<option value="">
+	Nenhuma conta
+</option>
+<?php endif; ?>
+		
+</select>
 </div>
+<div class="form-group">
+    <label for="valor" class="col-8">Valor</label>
+    <input class="form-control col-12" type="text" name="valor" id="valor" required></div>
+<button type="submit" name="salvar" value="salvar" class="btn btn-success col-6 top" required>Salvar</button>
+</div>
+</form>
 <table class="table table-dark bot">
 <thead>
 	<tr>
-		<th>Categoria</th>
+		<th>Conta</th>
+		<th>Valor</th>
+		<th>Data</th>
 	</tr>
 </thead>
 <tbody>
 <?php
-if ($selectcat):
-foreach ($selectcat as $select) : ?>
+if ($selectlanc):
+foreach ($selectlanc as $select) : ?>
 <tr>
-	<td><?php echo $select->categoria;?></td>
-	<td><a href="categoria.php?codigo=<?php if ($cod): foreach($cod as $codigo): echo $codigo->codigo;endforeach;endif; ?>&categoria=<?php echo $select->categoria; ?>" class="btn-outline-danger">Del</a></td>
+	<td><?php echo $select->nome;?></td>
+	<td><?php echo $select->valor;?></td>
+	<td><?php echo $select->datalanc;?></td>
+	<td><a href="lancamento.php?codigolanc=<?php echo $select->codigolanc; ?>&codigo=<?php if ($cod): foreach($cod as $codigo): echo $codigo->codigo;endforeach;endif; ?>" class="btn-outline-danger">Del</a></td>
 </tr>
 <?php endforeach;?>
 <?php else :?>
 <tr>
-	<td>Nenhuma categoria</td>
+	<td>Nenhum lançamento</td>
 </tr>
 <?php endif; ?>
 </tbody>
